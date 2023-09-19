@@ -45,7 +45,7 @@ export class Options extends Component<Props, {}> {
     return (
       <form class={style.optionsSection} onSubmit={preventDefault}>
         <label class={style.optionToggle}>
-          Interlace
+          隔行扫描
           <Checkbox
             name="interlace"
             checked={options.interlace}
@@ -61,7 +61,7 @@ export class Options extends Component<Props, {}> {
             value={options.level}
             onInput={this.onChange}
           >
-            Effort:
+            强度：
           </Range>
         </div>
       </form>

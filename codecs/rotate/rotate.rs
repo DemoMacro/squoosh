@@ -1,7 +1,7 @@
 use std::slice::{from_raw_parts, from_raw_parts_mut};
 
 // This function is taken from Zachary Dremann
-// https://github.com/GoogleChromeLabs/squoosh/pull/462
+// https://github.com/DemoMacro/squoosh/pull/462
 trait HardUnwrap<T> {
     fn unwrap_hard(self) -> T;
 }

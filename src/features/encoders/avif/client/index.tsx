@@ -172,7 +172,7 @@ export class Options extends Component<Props, State> {
     return (
       <form class={style.optionsSection} onSubmit={preventDefault}>
         <label class={style.optionToggle}>
-          Lossless
+          无损
           <Checkbox
             checked={lossless}
             onChange={this._inputChange('lossless', 'boolean')}
@@ -187,7 +187,7 @@ export class Options extends Component<Props, State> {
                 value={quality}
                 onInput={this._inputChange('quality', 'number')}
               >
-                Quality:
+                质量：
               </Range>
             </div>
           )}
@@ -197,7 +197,7 @@ export class Options extends Component<Props, State> {
             checked={showAdvanced}
             onChange={linkState(this, 'showAdvanced')}
           />
-          Advanced settings
+          高级设置
         </label>
         <Expander>
           {showAdvanced && (
@@ -206,7 +206,7 @@ export class Options extends Component<Props, State> {
                 {!lossless && (
                   <div>
                     <label class={style.optionTextFirst}>
-                      Subsample chroma:
+                      色度抽样：
                       <Select
                         value={subsample}
                         onChange={this._inputChange('subsample', 'number')}
@@ -217,7 +217,7 @@ export class Options extends Component<Props, State> {
                       </Select>
                     </label>
                     <label class={style.optionToggle}>
-                      Separate alpha quality
+                      分离透明度：
                       <Checkbox
                         checked={separateAlpha}
                         onChange={this._inputChange('separateAlpha', 'boolean')}
@@ -235,13 +235,13 @@ export class Options extends Component<Props, State> {
                               'number',
                             )}
                           >
-                            Alpha quality:
+                            透明度：
                           </Range>
                         </div>
                       )}
                     </Expander>
                     <label class={style.optionToggle}>
-                      Extra chroma compression
+                      额外的色度压缩
                       <Checkbox
                         checked={chromaDeltaQ}
                         onChange={this._inputChange('chromaDeltaQ', 'boolean')}
@@ -254,7 +254,7 @@ export class Options extends Component<Props, State> {
                         value={sharpness}
                         onInput={this._inputChange('sharpness', 'number')}
                       >
-                        Sharpness:
+                        清晰度：
                       </Range>
                     </div>
                     <div class={style.optionOneCell}>
@@ -264,18 +264,18 @@ export class Options extends Component<Props, State> {
                         value={denoiseLevel}
                         onInput={this._inputChange('denoiseLevel', 'number')}
                       >
-                        Noise synthesis:
+                        噪点合成：
                       </Range>
                     </div>
                     <label class={style.optionTextFirst}>
-                      Tuning:
+                      调整：
                       <Select
                         value={tune}
                         onChange={this._inputChange('tune', 'number')}
                       >
-                        <option value={AVIFTune.auto}>Auto</option>
-                        <option value={AVIFTune.psnr}>PSNR</option>
-                        <option value={AVIFTune.ssim}>SSIM</option>
+                        <option value={AVIFTune.auto}>自动</option>
+                        <option value={AVIFTune.psnr}>峰值信噪比</option>
+                        <option value={AVIFTune.ssim}>结构相似性</option>
                       </Select>
                     </label>
                   </div>
@@ -288,7 +288,7 @@ export class Options extends Component<Props, State> {
                   value={tileRows}
                   onInput={this._inputChange('tileRows', 'number')}
                 >
-                  Log2 of tile rows:
+                  Log2 堆叠行：
                 </Range>
               </div>
               <div class={style.optionOneCell}>
@@ -298,7 +298,7 @@ export class Options extends Component<Props, State> {
                   value={tileCols}
                   onInput={this._inputChange('tileCols', 'number')}
                 >
-                  Log2 of tile cols:
+                  Log2 堆叠列：
                 </Range>
               </div>
             </div>
@@ -311,7 +311,7 @@ export class Options extends Component<Props, State> {
             value={effort}
             onInput={this._inputChange('effort', 'number')}
           >
-            Effort:
+            强度：
           </Range>
         </div>
       </form>
